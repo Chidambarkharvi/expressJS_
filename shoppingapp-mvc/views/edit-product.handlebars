@@ -1,0 +1,60 @@
+
+{{>navbar}}
+<div class="container mt-3 w-50">
+  <h1>Edit page</h1> 
+  <form action="/products/edit-product" method="post">
+    <div class="form-group">
+      {{! <label for="exampleInputEmail1">Email address</label> }}
+      <input style="margin-bottom:20px"
+        type="hidden"
+        class="form-control"
+        id="_id"
+        name="_id"
+        placeholder="Product ID"
+        aria-describedby="emailHelp"
+        value="{{selectedProduct._id}}"
+      /> 
+
+    </div>
+    <div class="form-group">
+
+      <input style="margin-bottom:20px"
+        type="text"
+        class="form-control"
+        id="pName"
+        name="pName"
+        placeholder="Product name"
+        value="{{selectedProduct.pName}}"
+
+      />
+    </div>
+    <div class="form-group">
+
+      <input  style="margin-bottom:20px"
+        type="text"
+        class="form-control"
+        id="pDesc"
+        name="pDesc"
+        aria-describedby="emailHelp"
+        placeholder="Product Desc"
+        value="{{selectedProduct.pDesc}}"
+
+      />
+    </div>
+    <div class="form-group">
+
+      <input
+        type="text"
+        class="form-control"
+        id="pPrice"
+        name="pPrice"
+        aria-describedby="emailHelp"
+        placeholder="Product Price"
+        value="{{selectedProduct.pPrice}}"
+
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
